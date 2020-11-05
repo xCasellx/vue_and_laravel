@@ -62,12 +62,26 @@
                 </div>
             </b-modal>
         </div>
-        <div v-for="comment in comment_list">
-            <comment-item
-                :edit-modal="editModal"
-                :response-modal="responseModal"
-                :delete-modal="deleteModal"
-                :comment_parent = "comment"/>
+        <div v-if="!load">
+            <div v-for="comment in comment_list">
+                <comment-item
+                    :edit-modal="editModal"
+                    :response-modal="responseModal"
+                    :delete-modal="deleteModal"
+                    :comment_parent = "comment"/>
+            </div>
+            <div class="mt-3 justify-content-center container">
+                <b-pagination
+                    v-model="currentPage"
+                    :total-rows="rows"
+                    :per-page="perPage"
+                    align = "center"
+                    @input="loadComments"
+                ></b-pagination>
+            </div>
+        </div>
+        <div v-else class="text-center container bg-white p-5">
+            <b-spinner  class="justify-content-center" style="width: 3rem; height: 3rem;" label="load..."></b-spinner>
         </div>
     </div>
 </template>
@@ -76,15 +90,20 @@
 import CommentItem from "./CommentItem";
 export default {
     components:{
-        "comment-item" :CommentItem
+        "comment-item": CommentItem,
     },
     name: "Comments",
     data:function () {
         return {
+            rows: null,
+            perPage: 1,
+            currentPage: 1,
+
             comment_list: null,
             text: "",
             text_edit: "",
-            id: null
+            id: null,
+            load: true
         }
     },
     mounted() {
@@ -136,8 +155,10 @@ export default {
             });
         },
         loadComments: function () {
-            axios.get("/comments/read").then(response => {
-                this.comment_list = response.data;
+            axios.get("/comments/read/3?page="+this.currentPage).then(response => {
+                this.comment_list = response.data.data;
+                this.rows = response.data.last_page;
+                this.load = false;
             })
         }
     }

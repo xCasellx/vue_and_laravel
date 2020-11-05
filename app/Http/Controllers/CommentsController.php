@@ -15,10 +15,10 @@ class CommentsController extends Controller
         return view("comments");
     }
 
-    public function getCommentsList()
+    public function getCommentsList($coll)
     {
         $comment = Comment::where("parent_id", null)->select("comments.*","users.first_name", "users.second_name", "users.folder")
-            ->join("users", "comments.user_id", "users.id")->get();
+            ->join("users", "comments.user_id", "users.id")->orderBy('id', 'DESC')->paginate($coll);
 
         foreach ($comment as $key => $value) {
             $comment[$key]["child"] = $this->mass($value);

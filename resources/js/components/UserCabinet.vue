@@ -38,7 +38,6 @@
         <div v-else class="text-center p-5">
             <b-spinner  class="justify-content-center" style="width: 3rem; height: 3rem;" label="load..."></b-spinner>
         </div>
-
     </div>
 </template>
 

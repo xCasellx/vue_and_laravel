@@ -20,7 +20,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/cabinet/update/password', 'UserUpdateController@PostUpdatePassword');
     Route::post('/cabinet/update/image', 'UserUpdateController@PostUpdateImage');
     //api comment
-    Route::get('/comments/read', 'CommentsController@getCommentsList');
+    Route::get('/comments/read/{coll}', 'CommentsController@getCommentsList');
     Route::post('/comments/create', 'CommentsController@create');
     Route::post('/comments/update', 'CommentsController@update');
     Route::get('/comments/delete/{id}', 'CommentsController@delete');
