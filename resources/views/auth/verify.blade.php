@@ -1,7 +1,6 @@
 @extends('layouts.template')
 
 @section('title') Verify @endsection
-@include('layouts.nav')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">

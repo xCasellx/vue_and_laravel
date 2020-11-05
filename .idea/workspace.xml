@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb6c8956-bc58-4241-9d5d-fa57f51b0ff8" name="Default Changelist" comment="" />
+    <list default="true" id="eb6c8956-bc58-4241-9d5d-fa57f51b0ff8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Mail/ChangeMail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Mail/CommentShipped.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/CommentItem.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Comments.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/NavUserData.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/UpdateImage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/UpdatePassword.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/UserUpdate.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/comments.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/LocationSelect.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/LocationSelect.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/UserCabinet.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/UserCabinet.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/confirm.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/email.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/passwords/reset.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/cabinet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/cabinet.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/template.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,9 +49,13 @@
       <list>
         <option value="composer.json" />
         <option value="CSS File" />
+        <option value="package.json" />
         <option value="Vue Single File Component" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -131,8 +168,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Mail" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -140,19 +182,21 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="Laravel.SettingsForm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\web\OpenServer\domains\site_on_laravel_and_vue\public" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\web\OpenServer\domains\site_on_laravel_and_vue\resources\views" />
       <recent name="D:\web\OpenServer\domains\site_on_laravel_and_vue\resources\js\components" />
       <recent name="D:\web\OpenServer\domains\site_on_laravel_and_vue\public\css" />
       <recent name="D:\web\OpenServer\domains\site_on_laravel_and_vue\resources\css" />
       <recent name="D:\web\OpenServer\domains\site_on_laravel_and_vue\app\Http\Controllers\Location" />
-      <recent name="D:\web\OpenServer\domains\site_on_laravel_and_vue\app\Http\Controllers\Location " />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\web\OpenServer\domains\site_on_laravel_and_vue\app\Mail" />
+      <recent name="D:\web\OpenServer\domains\site_on_laravel_and_vue\public" />
     </key>
   </component>
   <component name="RunManager">
@@ -170,7 +214,10 @@
       <option name="presentableId" value="Default" />
       <updated>1603880444814</updated>
       <workItem from="1603880446164" duration="122000" />
-      <workItem from="1603881661568" duration="30132000" />
+      <workItem from="1603881661568" duration="34563000" />
+      <workItem from="1603971894341" duration="37014000" />
+      <workItem from="1604304542170" duration="52783000" />
+      <workItem from="1604520921195" duration="4312000" />
     </task>
     <servers />
   </component>
@@ -178,29 +225,67 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="112" key="#Deployment" timestamp="1603968661212">
+      <screen x="0" y="43" width="1536" height="821" />
+    </state>
+    <state x="361" y="112" key="#Deployment/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1603968661212" />
+    <state x="395" y="132" key="#Inspections" timestamp="1604521856617">
+      <screen x="0" y="43" width="1536" height="821" />
+    </state>
+    <state x="395" y="132" key="#Inspections/0.43.1536.821/1920.40.1920.1040@0.43.1536.821" timestamp="1604521856617" />
+    <state x="345" y="99" key="#SSH_Configurations" timestamp="1603968629932">
+      <screen x="0" y="43" width="1536" height="821" />
+    </state>
+    <state x="345" y="99" key="#SSH_Configurations/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1603968629932" />
     <state x="574" y="229" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603890748817">
       <screen x="0" y="43" width="1536" height="821" />
     </state>
     <state x="574" y="229" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1603890748817" />
-    <state x="499" y="200" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603887951580">
+    <state x="499" y="200" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1604304818719">
       <screen x="0" y="43" width="1536" height="821" />
     </state>
-    <state x="499" y="200" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1603887951580" />
-    <state x="499" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603965390607">
+    <state x="499" y="200" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1604304818719" />
+    <state x="499" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604393422812">
       <screen x="0" y="43" width="1536" height="821" />
     </state>
-    <state x="499" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1603965390607" />
-    <state x="549" y="208" key="FileChooserDialogImpl" timestamp="1603963241836">
+    <state x="499" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1603981395094" />
+    <state x="499" y="208" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.43.1536.821/1920.40.1920.1040@0.43.1536.821" timestamp="1604393422812" />
+    <state x="549" y="208" key="FileChooserDialogImpl" timestamp="1603972877308">
       <screen x="0" y="43" width="1536" height="821" />
     </state>
-    <state x="549" y="208" key="FileChooserDialogImpl/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1603963241836" />
-    <state x="604" y="377" key="NewPhpFileDialog" timestamp="1603883548628">
+    <state x="549" y="208" key="FileChooserDialogImpl/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1603972877308" />
+    <state x="604" y="377" key="NewPhpFileDialog" timestamp="1604343139568">
       <screen x="0" y="43" width="1536" height="821" />
     </state>
-    <state x="604" y="377" key="NewPhpFileDialog/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1603883548628" />
+    <state x="604" y="377" key="NewPhpFileDialog/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1603977032362" />
+    <state x="604" y="377" key="NewPhpFileDialog/0.43.1536.821/1920.40.1920.1040@0.43.1536.821" timestamp="1604343139568" />
     <state x="277" y="98" key="SettingsEditor" timestamp="1603880482313">
       <screen x="0" y="43" width="1536" height="821" />
     </state>
     <state x="277" y="98" key="SettingsEditor/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1603880482313" />
+    <state x="638" y="345" key="WebDeployment.AddServerDialog.v.1" timestamp="1603968565017">
+      <screen x="0" y="43" width="1536" height="821" />
+    </state>
+    <state x="638" y="345" key="WebDeployment.AddServerDialog.v.1/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1603968565017" />
+    <state x="1839" y="-24" width="1195" height="641" maximized="true" key="dock-window-1" timestamp="1604521033183">
+      <screen x="1920" y="40" width="1920" height="1040" />
+    </state>
+    <state x="1839" y="-24" width="1195" height="641" maximized="true" key="dock-window-1/0.43.1536.821/1920.40.1920.1040@0.43.1536.821" timestamp="1604521033183" />
+    <state x="2831" y="286" width="1179" height="809" key="dock-window-2" timestamp="1604483579493">
+      <screen x="1920" y="40" width="1920" height="1040" />
+    </state>
+    <state x="2831" y="286" width="1179" height="809" key="dock-window-2/0.43.1536.821/1920.40.1920.1040@0.43.1536.821" timestamp="1604483579493" />
+    <state x="478" y="53" width="579" height="801" key="find.popup" timestamp="1604314408181">
+      <screen x="0" y="43" width="1536" height="821" />
+    </state>
+    <state x="478" y="53" width="579" height="801" key="find.popup/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1604314408181" />
+    <state x="614" y="184" key="ftp.server.browser" timestamp="1603968656224">
+      <screen x="0" y="43" width="1536" height="821" />
+    </state>
+    <state x="614" y="184" key="ftp.server.browser/0.43.1536.821/1920.-469.1536.824@0.43.1536.821" timestamp="1603968656224" />
+    <state x="425" y="208" key="run.anything.popup" timestamp="1604510927059">
+      <screen x="0" y="43" width="1536" height="821" />
+    </state>
+    <state x="425" y="208" key="run.anything.popup/0.43.1536.821/1920.40.1920.1040@0.43.1536.821" timestamp="1604510927059" />
   </component>
 </project>

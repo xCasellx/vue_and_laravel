@@ -2,7 +2,7 @@
 
 @section('title') Sign up @endsection
 
-@include('layouts.nav')
+
 
 @section('content')
     <div class="container">

@@ -2,13 +2,3 @@ body{
     background-color: #00202e!important;
     color: #0d1011;
 }
-
-.btn-yellow{
-    background-color: #cb7f07;
-    color: #fff;
-}
-
-.btn-yellow:hover{
-    background-color: #985f03;
-    color: #eee;
-}

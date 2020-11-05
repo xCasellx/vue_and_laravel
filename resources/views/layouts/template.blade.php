@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="{{asset("css/style.css")}}">
     <title>@yield('title')</title>
 </head>
-<body>
-<main id="app" class="">
-    @yield('content')
-</main>
+<body >
+    <div id="app">
+        @include('layouts.nav')
+        <main class="">
+            @yield('content')
+        </main>
+    </div>
 </body>
 <script src="{{mix('js/app.js')}}"></script>
 @yield('script')

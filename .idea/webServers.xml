@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="b1210d00-f951-4f0b-9c54-61ea50df47e7" name="ubuntu">
+        <fileTransfer rootFolder="/var/www/mission-laravel" accessType="SFTP" host="3.129.14.7" port="22" sshConfigId="98a3b237-304c-4436-b346-b502306c229d" sshConfig="ubuntu@3.129.14.7:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
