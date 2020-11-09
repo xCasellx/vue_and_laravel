@@ -50,6 +50,7 @@ class UserUpdateController extends Controller
             'second_name' => $data['second_name'],
             'date_of_birth' => $data['date_of_birth'],
             'email' => $data['email'],
+            'twitter' => isset($data["twitter"])? $data["twitter"]: null,
             'phone' => $data['phone'],
             'town_id' => $data['city_id'],
         ]);

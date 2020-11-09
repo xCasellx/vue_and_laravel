@@ -1,18 +1,18 @@
 <template>
-    <div  class="container ">
+    <div  class="container mt-2">
         <div class = 'card p-0 comments'>
             <div class =' p-1 card-header bg-dark text-light row' >
                 <div class ='col-1 p-0' style="max-width: 32px">
-                    <img class ='comment-img rounded m-0 img-fluid img' :src='comment_parent.image' style='width: 32px;height: 32px;' alt=''>
+                    <img class ='comment-img rounded m-0 img-fluid img' @click="image" :src='comment_parent.image' style='width: 32px;height: 32px;' alt=''>
                 </div>
-                <h6 class='col '>{{comment_parent.first_name}} {{comment_parent.second_name}}</h6>
+                <a :href="'/user/'+comment_parent.user_id" class='col text-decoration-none text-white'>{{comment_parent.first_name}} {{comment_parent.second_name}}</a>
                 <small class='col text-right date-comment' >{{comment_parent.created_at}}</small>
             </div>
             <div class='p-1 card-body comments-text'>
                 {{ comment_parent.text}}
             </div>
 
-            <div class='row p-1 pr-2 m-0 card-footer bg-dark'>
+            <div class='row p-0 m-0 card-footer bg-dark'>
                 <div v-if="comment_parent.child.length !== 0"  class="col">
                     <button   @click="show = !show"
                          class="btn m-0 p-0 text-white"
@@ -67,6 +67,9 @@ export default {
         },
         "deleteModal" :{
             type: Function
+        },
+        "imageModal" :{
+            type: Function
         }
     },
     methods:{
@@ -78,6 +81,9 @@ export default {
         },
         remove: function () {
             this.deleteModal(this.comment_parent.id);
+        },
+        image: function () {
+            this.imageModal(this.comment_parent.image);
         }
     },
 }

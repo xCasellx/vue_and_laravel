@@ -11,7 +11,9 @@
             </b-alert>
 
             <b-alert v-if="success.visible" show variant="success">
-                <p>{{success.message}}</p>
+                <ul>
+                    <li>{{success.message}}</li>
+                </ul>
             </b-alert>
 
             <form method="POST" action="/cabinet/update/user" @submit.prevent="editData($event)">
@@ -55,6 +57,15 @@
                         />
                     </div>
                 </div>
+
+                <div class="form-group row">
+                    <label for="first_name" class="col-md-4 col-form-label text-md-right">Twitter ID</label>
+                    <div class="col-md-6">
+                        <input id="twitter" type="text" class="form-control" name="twitter"
+                               v-model="user.twitter" autocomplete="twitter" autofocus>
+                    </div>
+                </div>
+
                 <div class="form-group row">
                     <label for="date_of_birth" class="col-md-4 col-form-label text-md-right">Date Of Birth</label>
                     <div class="col-md-6">

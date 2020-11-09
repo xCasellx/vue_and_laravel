@@ -73,7 +73,6 @@ export default {
                     this.success.message = response.data.message;
                     this.image  = this.image + Math.random();
 
-
                 }).catch((error) => {
                     this.errors.visible = true;
                     this.errors.array = error.response.data.errors;

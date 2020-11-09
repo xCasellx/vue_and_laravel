@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-            <div class="container bg-white p-3 mb-4">
+            <div class="container bg-white p-3 mb-4 rounded">
                 <form class="m-3 form-comment" method="POST" action="/" @submit.prevent="createComment">
                 <div class="">
                     <textarea required name="text" v-model="text" rows="10" maxlength="512" class="form-control"></textarea>
@@ -61,6 +61,25 @@
                     <button type="button" class="btn btn-info" @click="$bvModal.hide('delete');">Close</button>
                 </div>
             </b-modal>
+
+            <b-modal id="image"
+                     title="Image"
+                     @hide="image"
+                     size="lg"
+                     hide-footer>
+                <div class="text-center">
+                    <img :src="image" class="" style="max-width: 100%" alt="user image">
+                </div>
+            </b-modal>
+        </div>
+        <div class="mt-3 justify-content-center container">
+            <b-pagination
+                v-model="currentPage"
+                :total-rows="rows"
+                :per-page="perPage"
+                align = "center"
+                @input="loadComments"
+            ></b-pagination>
         </div>
         <div v-if="!load">
             <div v-for="comment in comment_list">
@@ -68,16 +87,8 @@
                     :edit-modal="editModal"
                     :response-modal="responseModal"
                     :delete-modal="deleteModal"
+                    :image-modal="imageModal"
                     :comment_parent = "comment"/>
-            </div>
-            <div class="mt-3 justify-content-center container">
-                <b-pagination
-                    v-model="currentPage"
-                    :total-rows="rows"
-                    :per-page="perPage"
-                    align = "center"
-                    @input="loadComments"
-                ></b-pagination>
             </div>
         </div>
         <div v-else class="text-center container bg-white p-5">
@@ -103,7 +114,8 @@ export default {
             text: "",
             text_edit: "",
             id: null,
-            load: true
+            load: true,
+            image: ""
         }
     },
     mounted() {
@@ -111,8 +123,9 @@ export default {
     },
     methods:{
         closeModal: function () {
-            this.text_edit =  "",
+            this.text_edit =  "";
             this.id = null;
+            this.image = "";
         },
         editModal: function (id, text) {
             this.id = id;
@@ -127,6 +140,10 @@ export default {
         deleteModal: function (id) {
             this.id = id;
             this.$bvModal.show("delete");
+        },
+        imageModal: function (image) {
+            this.image = image;
+            this.$bvModal.show("image");
         },
         createComment: function() {
             axios.post("/comments/create", {
@@ -155,7 +172,7 @@ export default {
             });
         },
         loadComments: function () {
-            axios.get("/comments/read/3?page="+this.currentPage).then(response => {
+            axios.get("/comments/read/5?page="+this.currentPage).then(response => {
                 this.comment_list = response.data.data;
                 this.rows = response.data.last_page;
                 this.load = false;

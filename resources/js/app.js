@@ -17,6 +17,7 @@ Vue.component('nav-user-data', require('./components/NavUserData').default);
 Vue.component('location-select', require('./components/LocationSelect').default);
 Vue.component('user-cabinet', require('./components/UserCabinet').default);
 Vue.component('comments' , require("./components/Comments").default);
+Vue.component('account' , require("./components/Account").default);
 
 const app = new Vue({
     el: '#app',

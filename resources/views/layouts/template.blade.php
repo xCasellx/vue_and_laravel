@@ -10,13 +10,17 @@
     <title>@yield('title')</title>
 </head>
 <body >
-    <div id="app">
+    <div id="app" style="min-height: 100vh">
         @include('layouts.nav')
         <main class="">
             @yield('content')
         </main>
     </div>
+    <footer class="text-white bg-dark mt-5">
+        <div class="container text-center py-3">© 2020 Copyright</div>
+    </footer>
 </body>
 <script src="{{mix('js/app.js')}}"></script>
 @yield('script')
+
 </html>
