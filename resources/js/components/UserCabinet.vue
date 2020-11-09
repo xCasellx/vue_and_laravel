@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div v-if="user.email_verified_at === null" class="row alert-danger p-2 rounded">
+        <div v-if="user.email_verified_at === null" class="alert-danger container p-2 rounded">
             <a class="text-decoration-none text-danger" href="/email/verify">Click to confirm mail</a>
         </div>
         <user-information v-if="!load" :user="user" />

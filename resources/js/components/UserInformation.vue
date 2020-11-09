@@ -40,7 +40,7 @@
                 <img :src="user.image" class="" style="max-width: 100%" alt="user image">
             </div>
         </b-modal>
-        <twitter-api :twitter="user.twitter"/>
+        <twitter-api v-if="user.twitter" :twitter="user.twitter"/>
     </div>
 
 </template>
