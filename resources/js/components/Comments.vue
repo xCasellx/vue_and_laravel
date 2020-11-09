@@ -172,6 +172,7 @@ export default {
             });
         },
         loadComments: function () {
+            this.load = true;
             axios.get("/comments/read/5?page="+this.currentPage).then(response => {
                 this.comment_list = response.data.data;
                 this.rows = response.data.last_page;

@@ -1,5 +1,5 @@
 <template>
-    <div class="card p-0 container bg-white">
+    <div v-if="!load" class="card p-0 container bg-white">
         <div class="card-header p-1 m-1 bg-primary text-white">
             <h3 class="text-center col">Tweets</h3>
         </div>
@@ -21,6 +21,9 @@
             </div>
         </div>
     </div>
+    <div v-else class="text-center container bg-white p-5">
+        <b-spinner  class="justify-content-center" style="width: 3rem; height: 3rem;" label="load..."></b-spinner>
+    </div>
 </template>
 
 <script>
@@ -36,7 +39,8 @@ export default {
     },
     data: function () {
         return {
-            tweets : []
+            tweets : [],
+            load: true,
         }
     },
     mounted() {
@@ -46,6 +50,7 @@ export default {
         loadTweets: function () {
             axios.get("/tweets/"+this.twitter+"/"+this.count).then(resposnse => {
                this.tweets = resposnse.data;
+               this.load = false;
             })
         }
     }
