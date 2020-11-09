@@ -6,7 +6,7 @@ Route::get('/location/city/{id}', 'Location\\CityController@index')->name('locat
 Route::get('/location/country', 'Location\\CountryController@index')->name('location.country');
 Route::get('/location/region/{id}', 'Location\\RegionController@index')->name('location.region');
 
-Route::get('/tweets/{user}/{count}', "TwitterController@getTweetsUser");
+
 
 Route::group(['middleware' => 'auth'], function () {
     //api user
@@ -16,6 +16,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/cabinet/update/user', 'UserUpdateController@PostUpdateData');
     Route::post('/cabinet/update/password', 'UserUpdateController@PostUpdatePassword');
     Route::post('/cabinet/update/image', 'UserUpdateController@PostUpdateImage');
+    Route::get('/tweets/{user}/{count}', "TwitterController@getTweetsUser");
+
     //api comment
     Route::get('/comments/read/{coll}', 'CommentsController@getCommentsList');
     Route::post('/comments/create', 'CommentsController@create');

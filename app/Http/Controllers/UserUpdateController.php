@@ -86,7 +86,7 @@ class UserUpdateController extends Controller
     ]);
         $user = Auth::user();
         $file = $request->file('image');
-        $directory = public_path("users\\user-$user->id\\");
+        $directory = public_path("users/user-$user->id/");
         if(!File::exists($directory)){
             File::makeDirectory($directory, 0777);
         }

@@ -41,6 +41,9 @@
             </div>
         </b-modal>
         <twitter-api v-if="user.twitter" :twitter="user.twitter"/>
+        <div v-else class="text-center container bg-white p-5">
+            <b-spinner  class="justify-content-center" style="width: 3rem; height: 3rem;" label="load..."></b-spinner>
+        </div>
     </div>
 
 </template>
