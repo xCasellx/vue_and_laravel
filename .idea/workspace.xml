@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb6c8956-bc58-4241-9d5d-fa57f51b0ff8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/js/components/UserInformation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/UserInformation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/TwitterApi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/TwitterApi.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +189,7 @@
       <workItem from="1603971894341" duration="37014000" />
       <workItem from="1604304542170" duration="52783000" />
       <workItem from="1604520921195" duration="44811000" />
-      <workItem from="1604914377929" duration="19038000" />
+      <workItem from="1604914377929" duration="19151000" />
     </task>
     <servers />
   </component>

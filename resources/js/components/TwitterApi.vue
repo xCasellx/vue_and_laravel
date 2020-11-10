@@ -4,7 +4,7 @@
             <h3 class="text-center col">Tweets</h3>
         </div>
         <div class="row card-body">
-            <div v-for="tweet in tweets" class=" mt-2 mr-3 ml-3 mb-0  row p-3 container-fluid">
+            <div v-for="tweet in tweets" class=" mt-2 mr-3 mb-0  row p-3 container-fluid">
                 <div style="min-width: 64px">
                     <img :src="tweet.user.profile_image_url_https" alt=" user image"
                          class="img rounded-circle mx-auto d-block" >
