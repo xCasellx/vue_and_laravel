@@ -4,7 +4,7 @@
             <h3 class="text-center col">Tweets</h3>
         </div>
         <div class="row card-body">
-            <div v-for="tweet in tweets" class=" mt-2 mr-3 mb-0  row p-3 container-fluid">
+            <div v-for="tweet in tweets" class="mt-2 mr-3 mb-0 row p-3 container-fluid">
                 <div style="min-width: 64px">
                     <a :href="'https://mobile.twitter.com/'+tweet.user.screen_name">
                         <img :src="tweet.user.profile_image_url_https" alt=" user image"
@@ -31,14 +31,14 @@
             </div>
         </div>
     </div>
-    <div v-else-if = "!errors" class="text-center container bg-white p-5">
-        <b-spinner  class="justify-content-center" style="width: 3rem; height: 3rem;" label="load..."></b-spinner>
+    <div v-else-if="!errors" class="text-center container bg-white p-5">
+        <b-spinner class="justify-content-center" style="width: 3rem; height: 3rem;" label="load..."></b-spinner>
     </div>
 </template>
 
 <script>
 export default {
-    name: "TwitterAPI",
+    name: 'TwitterAPI',
     props: {
         count: {
             default: 10
@@ -59,7 +59,7 @@ export default {
     },
     methods:{
         loadTweets: function () {
-            axios.get("/tweets/"+this.twitter+"/"+this.count).then(resposnse => {
+            axios.get('/tweets/' + this.twitter + '/' + this.count).then(resposnse => {
                if(resposnse.data.errors){
                     this.errors = true;
                }
@@ -76,8 +76,5 @@ export default {
 </script>
 
 <style scoped>
-    @media (min-width: 576px) {
-
-    }
 </style>
 

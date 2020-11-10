@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <div class=" text-center h3 card-header">Edit Image</div>
+        <div class="text-center h3 card-header">Edit Image</div>
         <div class="card-body">
             <b-alert v-if="errors.visible" show variant="danger">
                 <div v-for="error_list in errors.array">
@@ -33,7 +33,7 @@
 
 <script>
 export default {
-    name: "UpdateImage",
+    name: 'UpdateImage',
     data: function () {
         return {
             image: '',
@@ -44,7 +44,7 @@ export default {
             },
             success:{
                 visible: false,
-                message: "",
+                message: '',
             },
         }
     },
@@ -53,7 +53,7 @@ export default {
     },
     methods:{
         load: function () {
-            axios.get("/cabinet/user-update").then(response => {
+            axios.get('/cabinet/user-update').then(response => {
                 this.image = response.data.image;
             })
         },
@@ -63,7 +63,7 @@ export default {
         onSubmit: function () {
             if(this.FILE !== null) {
                 let formData = new FormData();
-                formData.append("image",this.FILE);
+                formData.append('image',this.FILE);
                 axios.post('/cabinet/update/image', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data'

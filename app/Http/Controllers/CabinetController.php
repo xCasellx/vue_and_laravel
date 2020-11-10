@@ -11,8 +11,7 @@ class CabinetController extends Controller
 {
     public function index()
     {
-        return view("cabinet");
-
+        return view("account")->with("id", Auth::id());
     }
 
     public function userCabinet($id)

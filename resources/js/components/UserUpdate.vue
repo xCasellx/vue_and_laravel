@@ -1,6 +1,6 @@
 <template>
     <div class="card">
-        <div class=" text-center h3 card-header">Edit data</div>
+        <div class="text-center h3 card-header">Edit data</div>
         <div v-if="!load" class="card-body">
             <b-alert v-if="errors.visible" show variant="danger">
                 <div v-for="error_list in errors.array">
@@ -90,7 +90,7 @@
 
 <script>
 export default {
-    name: "UserUpdate",
+    name: 'UserUpdate',
     data: function () {
         return{
             user: [],
@@ -100,7 +100,7 @@ export default {
             },
             success:{
                 visible: false,
-                message: "",
+                message: '',
             },
             load: true,
         }
@@ -113,15 +113,15 @@ export default {
             this.user.city_id = city_id;
         },
         loadData: function () {
-            axios.get("/cabinet/user-update").then(response => {
+            axios.get('/cabinet/user-update').then(response => {
                 this.user = response.data;
                 this.user.city_id = this.user.town_id.city_id;
                 this.load = false;
             })
         },
-        editData: function (e) {
+        editData: function () {
 
-            axios.post("/cabinet/update/user", this.user).then(response => {
+            axios.post('/cabinet/update/user', this.user).then(response => {
                 this.success.visible = true;
                 this.success.message = response.data.message;
 

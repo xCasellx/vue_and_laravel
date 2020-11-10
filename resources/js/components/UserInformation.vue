@@ -1,13 +1,13 @@
 <template>
-    <div class="card p-0 container " >
+    <div class="card p-0 container">
         <div class="card-header">
             <h3 class="text-center col">User information</h3>
         </div>
-        <div class="row card-body ">
+        <div class="row card-body">
             <div class="col-sm" style="">
                 <img class="rounded img mx-auto d-block" @click="$bvModal.show('image')" id="user-image" :src="user.image"  alt="" style="max-width: 100%">
             </div>
-            <div class="col-sm ">
+            <div class="col-sm">
                 <div class="justify-content-center">
                     <b-list-group>
                         <b-list-group-item>
@@ -19,10 +19,10 @@
                         <b-list-group-item>
                             <strong>Date of Birth:</strong> {{user.date_of_birth}}
                         </b-list-group-item>
-                        <b-list-group-item>
+                        <b-list-group-item v-if="user.auth">
                             <strong>Email:</strong> {{user.email}}
                         </b-list-group-item>
-                        <b-list-group-item>
+                        <b-list-group-item v-if="user.auth">
                             <strong>Phone:</strong> {{user.phone}}
                         </b-list-group-item>
                         <b-list-group-item>
@@ -37,7 +37,7 @@
                  size="lg"
                  hide-footer>
             <div class="text-center">
-                <img :src="user.image" class="" style="max-width: 100%" alt="user image">
+                <img :src="user.image" style="max-width: 100%" alt="user image">
             </div>
         </b-modal>
         <twitter-api v-if="user.twitter" :twitter="user.twitter"/>
@@ -47,9 +47,9 @@
 </template>
 
 <script>
-import TwitterApi from "./TwitterApi";
+import TwitterApi from './TwitterApi';
 export default {
-    name: "UserInformation",
+    name: 'UserInformation',
     components: {TwitterApi},
     template: {
         TwitterApi

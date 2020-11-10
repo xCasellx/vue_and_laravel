@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Carbon\Carbon;
 use DateTimeInterface;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
@@ -17,5 +18,13 @@ class Comment extends Model
     protected function serializeDate(DateTimeInterface $date) : string
     {
         return $date->format('H:i d-m-Y');
+    }
+
+    public function getCreatedAtAttribute($value)
+    {
+        return Carbon::createFromTimestamp(strtotime($value))
+            ->timezone('Europe/Kiev')
+            ->toDateTimeString()
+            ;
     }
 }

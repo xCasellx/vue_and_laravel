@@ -1,7 +1,6 @@
 <template>
     <div class="card">
-
-        <div class=" text-center h3 card-header">Edit password</div>
+        <div class="text-center h3 card-header">Edit password</div>
         <div class="card-body">
             <b-alert v-if="errors.visible" show variant="danger">
                 <div v-for="error_list in errors.array">
@@ -52,28 +51,25 @@
 
 <script>
 export default {
-    name: "UpdatePassword",
-    props:[
-        "_token"
-    ],
+    name: 'UpdatePassword',
     data: function () {
         return{
-            password: "",
-            new_password: "",
-            new_password_confirmation: "",
+            password: '',
+            new_password: '',
+            new_password_confirmation: '',
             errors: {
                 visible: false,
                 array: []
             },
             success:{
                 visible: false,
-                message: "",
+                message: '',
             },
         }
     },
     methods: {
         editPassword: function (e) {
-            axios.post("/cabinet/update/password", {
+            axios.post('/cabinet/update/password', {
                 password: this.password,
                 new_password: this.new_password,
                 new_password_confirmation: this.new_password_confirmation,

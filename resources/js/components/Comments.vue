@@ -58,7 +58,7 @@
                      hide-footer>
                 <div class="text-center">
                     <button type="button" class="btn btn-danger" @click="deleteComment">Delete</button>
-                    <button type="button" class="btn btn-info" @click="$bvModal.hide('delete');">Close</button>
+                    <button type="button" class="btn btn-info" @click="$bvModal.hide('delete')">Close</button>
                 </div>
             </b-modal>
 
@@ -77,7 +77,7 @@
                 v-model="currentPage"
                 :total-rows="rows"
                 :per-page="perPage"
-                align = "center"
+                align="center"
                 @input="loadComments"
             ></b-pagination>
         </div>
@@ -98,12 +98,12 @@
 </template>
 
 <script>
-import CommentItem from "./CommentItem";
+import CommentItem from './CommentItem';
 export default {
     components:{
-        "comment-item": CommentItem,
+        'comment-item': CommentItem,
     },
-    name: "Comments",
+    name: 'Comments',
     data:function () {
         return {
             rows: null,
@@ -111,11 +111,11 @@ export default {
             currentPage: 1,
 
             comment_list: null,
-            text: "",
-            text_edit: "",
+            text: '',
+            text_edit: '',
             id: null,
             load: true,
-            image: ""
+            image: ''
         }
     },
     mounted() {
@@ -123,57 +123,57 @@ export default {
     },
     methods:{
         closeModal: function () {
-            this.text_edit =  "";
+            this.text_edit =  '';
             this.id = null;
-            this.image = "";
+            this.image = '';
         },
         editModal: function (id, text) {
             this.id = id;
             this.text_edit = text;
-            this.$bvModal.show("edit");
+            this.$bvModal.show('edit');
 
         },
         responseModal: function (id) {
             this.id = id;
-            this.$bvModal.show("response");
+            this.$bvModal.show('response');
         },
         deleteModal: function (id) {
             this.id = id;
-            this.$bvModal.show("delete");
+            this.$bvModal.show('delete');
         },
         imageModal: function (image) {
             this.image = image;
-            this.$bvModal.show("image");
+            this.$bvModal.show('image');
         },
         createComment: function() {
-            axios.post("/comments/create", {
+            axios.post('/comments/create', {
                 parent_id: this.id,
                 text: this.text
             }).then(response => {
-                this.text =  "",
+                this.text =  '';
                 this.loadComments();
-                this.$bvModal.hide("response");
+                this.$bvModal.hide('response');
             });
         },
         editComment: function() {
-            axios.post("/comments/update", {
+            axios.post('/comments/update', {
                 comment_id: this.id,
                 text: this.text_edit
             }).then(response => {
                 this.loadComments();
-                this.$bvModal.hide("edit");
+                this.$bvModal.hide('edit');
             });
         },
         deleteComment: function() {
-            axios.get("/comments/delete/"+this.id,
+            axios.get('/comments/delete/' + this.id,
             ).then(response => {
                 this.loadComments();
-                this.$bvModal.hide("delete");
+                this.$bvModal.hide('delete');
             });
         },
         loadComments: function () {
             this.load = true;
-            axios.get("/comments/read/5?page="+this.currentPage).then(response => {
+            axios.get('/comments/read/5?page=' + this.currentPage).then(response => {
                 this.comment_list = response.data.data;
                 this.rows = response.data.last_page;
                 this.load = false;

@@ -11,6 +11,7 @@ Route::get('/location/region/{id}', 'Location\\RegionController@index')->name('l
 Route::group(['middleware' => 'auth'], function () {
     //api user
     Route::get('/user/user-data/', 'UserController@getAuthUserData')->name('user.auth.data');
+    Route::get('/test', 'UserController@test')->name('user.test');
     Route::get('/user/user-data/{id}', 'UserController@getUserData')->name('user.data');
     Route::get('/cabinet/user-update', 'UserUpdateController@getUpdateData')->name('get.update.data');
     Route::post('/cabinet/update/user', 'UserUpdateController@PostUpdateData');

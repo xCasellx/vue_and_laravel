@@ -38,4 +38,13 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function GetCity()
+    {
+        return $this->select("cities.name as city", "regions.name as region", "countries.name as country")
+            ->join("cities", 'cities.id', "=", "users.town_id")
+            ->join("regions", 'cities.region_id', "=", "regions.id")
+            ->join("countries", 'regions.country_id', "=", "countries.id")
+            ->where("users.id", $this->id)->get()[0];
+    }
 }

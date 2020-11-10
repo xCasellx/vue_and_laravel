@@ -18,11 +18,11 @@
 
 <script>
 export default {
-    name: "Location",
+    name: 'Location',
     props: {
-        id_regions : null,
-        id_country : null,
-        id_cites : null,
+        id_regions : Number,
+        id_country : Number,
+        id_cites : Number,
         callback :{
             type: Function,
             default: null
@@ -55,18 +55,18 @@ export default {
         loadCountry: function () {
             this.regions = [];
             this.cites = [];
-            axios.get("/location/country").then((response) => {
+            axios.get('/location/country').then((response) => {
                 this.countries = response.data;
             })
         },
         loadRegion: function () {
             this.cites = [];
-            axios.get("/location/region/"+this.id_country).then((response) => {
+            axios.get('/location/region/' + this.id_country).then((response) => {
                 this.regions = response.data;
             })
         },
         loadCity: function () {
-            axios.get("/location/city/"+this.id_regions).then((response) => {
+            axios.get('/location/city/' + this.id_regions).then((response) => {
                 this.cites = response.data;
             })
         }

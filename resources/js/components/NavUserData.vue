@@ -21,7 +21,7 @@
 
 <script>
 export default {
-    name: "NavUserData",
+    name: 'NavUserData',
     data: function () {
         return{
             user: [],
@@ -33,8 +33,7 @@ export default {
     },
     methods:{
         loadData: function () {
-            this.load = true;
-            axios.get("/user/user-data/").then(response => {
+            axios.get('/user/user-data/').then(response => {
                 this.user = response.data;
                 this.load = false;
             })
