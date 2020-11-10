@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eb6c8956-bc58-4241-9d5d-fa57f51b0ff8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/TwitterApi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/TwitterApi.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +190,7 @@
       <workItem from="1603971894341" duration="37014000" />
       <workItem from="1604304542170" duration="52783000" />
       <workItem from="1604520921195" duration="44811000" />
-      <workItem from="1604914377929" duration="22299000" />
+      <workItem from="1604914377929" duration="22964000" />
     </task>
     <servers />
   </component>

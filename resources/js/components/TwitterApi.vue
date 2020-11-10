@@ -15,7 +15,7 @@
                     <div class="row border-bottom border-dark text-dark">
                         <div class="w-50">
                             <a :href="'https://mobile.twitter.com/'+tweet.user.screen_name" class="text-decoration-none text-dark">
-                                <small >{{tweet.user.name}}  @{{tweet.user.screen_name}}</small>
+                                <small ><strong>{{tweet.user.name}}</strong>  @{{tweet.user.screen_name}}</small>
                             </a>
                         </div>
                         <small class="w-50 text-right ">{{tweet.created_at.replace("+0000 ", "")}}</small>
