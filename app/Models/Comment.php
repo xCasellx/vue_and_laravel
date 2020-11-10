@@ -14,17 +14,11 @@ class Comment extends Model
     protected $fillable = [
         "text", "create_at", "user_id", "parent_id", "edit_check"
     ];
-
-    protected function serializeDate(DateTimeInterface $date) : string
-    {
-        return $date->format('H:i d-m-Y');
-    }
-
+    
     public function getCreatedAtAttribute($value)
     {
         return Carbon::createFromTimestamp(strtotime($value))
             ->timezone('Europe/Kiev')
-            ->toDateTimeString()
-            ;
+            ->format('H:i d-m-Y');
     }
 }
