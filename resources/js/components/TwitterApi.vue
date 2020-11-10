@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-    <div v-else class="text-center container bg-white p-5">
+    <div v-else-if = "!errors" class="text-center container bg-white p-5">
         <b-spinner  class="justify-content-center" style="width: 3rem; height: 3rem;" label="load..."></b-spinner>
     </div>
 </template>
@@ -51,6 +51,7 @@ export default {
         return {
             tweets : [],
             load: true,
+            errors: false,
         }
     },
     mounted() {
@@ -59,8 +60,15 @@ export default {
     methods:{
         loadTweets: function () {
             axios.get("/tweets/"+this.twitter+"/"+this.count).then(resposnse => {
-               this.tweets = resposnse.data;
-               this.load = false;
+               if(resposnse.data.errors){
+                    this.errors = true;
+               }
+               else {
+                   this.tweets = resposnse.data;
+                   this.load = false;
+               }
+
+
             })
         }
     }
