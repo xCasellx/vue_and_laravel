@@ -1,5 +1,5 @@
 <template>
-    <div class="card p-0 container ">
+    <div class="card p-0 container " style="min-width: 465px">
         <div class="card-header">
             <h3 class="text-center col">User information</h3>
         </div>
