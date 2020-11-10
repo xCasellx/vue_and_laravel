@@ -6,19 +6,26 @@
         <div class="row card-body">
             <div v-for="tweet in tweets" class=" mt-2 mr-3 mb-0  row p-3 container-fluid">
                 <div style="min-width: 64px">
-                    <img :src="tweet.user.profile_image_url_https" alt=" user image"
-                         class="img rounded-circle mx-auto d-block" >
+                    <a :href="'https://mobile.twitter.com/'+tweet.user.screen_name">
+                        <img :src="tweet.user.profile_image_url_https" alt=" user image"
+                             class="img rounded-circle mx-auto d-block" >
+                    </a>
                 </div>
                 <div class="col ">
                     <div class="row border-bottom border-dark text-dark">
-                        <small class="w-50 ">{{tweet.user.name}}  @{{tweet.user.screen_name}}</small>
+                        <div class="w-50">
+                            <a :href="'https://mobile.twitter.com/'+tweet.user.screen_name" class="text-decoration-none text-dark">
+                                <small >{{tweet.user.name}}  @{{tweet.user.screen_name}}</small>
+                            </a>
+                        </div>
                         <small class="w-50 text-right ">{{tweet.created_at.replace("+0000 ", "")}}</small>
+
                     </div>
                     <div class="mt-2">
                         {{tweet.full_text}}
                     </div>
                     <div class="row text-dark">
-                        <a class="w-100 text-decoration-none text-right small" :href="'https://mobile.twitter.com/'+tweet.user.screen_name+'/status/'+tweet.id_str">view twitter</a>
+                        <a target="_blank" class="w-100 text-decoration-none text-right small" :href="'https://mobile.twitter.com/'+tweet.user.screen_name+'/status/'+tweet.id_str">view twitter</a>
                     </div>
                 </div>
             </div>
