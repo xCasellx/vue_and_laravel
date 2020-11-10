@@ -17,6 +17,9 @@
                     <div class="mt-2">
                         {{tweet.full_text}}
                     </div>
+                    <div class="row text-dark">
+                        <a class="w-100 text-decoration-none text-right small" :href="'https://mobile.twitter.com/'+tweet.user.screen_name+'/status/'+tweet.id_str">view twitter</a>
+                    </div>
                 </div>
             </div>
         </div>
