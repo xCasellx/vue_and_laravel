@@ -14,7 +14,7 @@ class Comment extends Model
     protected $fillable = [
         "text", "create_at", "user_id", "parent_id", "edit_check"
     ];
-    
+
     public function getCreatedAtAttribute($value)
     {
         return Carbon::createFromTimestamp(strtotime($value))

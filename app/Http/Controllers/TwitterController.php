@@ -17,6 +17,9 @@ class TwitterController extends Controller
         );
           $tweets = $connect->get("statuses/user_timeline",["screen_name" => $user, "count" => $count,
                                         "tweet_mode" => "extended"]);
+          foreach ($tweets as $tweet) {
+
+          }
         return response()->json($tweets);
     }
 }
