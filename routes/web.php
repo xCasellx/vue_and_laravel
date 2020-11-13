@@ -7,7 +7,6 @@ Route::get('/location/country', 'Location\\CountryController@index')->name('loca
 Route::get('/location/region/{id}', 'Location\\RegionController@index')->name('location.region');
 
 
-
 Route::group(['middleware' => 'auth'], function () {
     //api user
     Route::get('/user/user-data/', 'UserController@getAuthUserData')->name('user.auth.data');
