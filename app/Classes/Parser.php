@@ -13,6 +13,7 @@ class Parser
 {
     private $url ;
     private $client;
+    private $query;
 
     public function __construct($url)
     {
@@ -22,13 +23,11 @@ class Parser
 
     public function run()
     {
-        $links = $this->GetParserLink($this->url);
+        $links = $this->getParserLink($this->url);
         $this->GetParserData($links);
     }
 
-
-
-    private function GetParserUrl($url)
+    private function getParserUrl($url)
     {
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -41,9 +40,9 @@ class Parser
         return $output;
     }
 
-    private function GetParserLink($url)
+    private function getParserLink($url)
     {
-        $parse = $this->GetParserUrl($url);
+        $parse = $this->getParserUrl($url);
         $mass = [];
         $dom = phpQuery::newDocument($parse);
         foreach ($dom->find(".space > .lheight22") as $key => $value){
@@ -60,10 +59,9 @@ class Parser
         return $mass;
     }
 
-    private function GetParserData($links)
+    private function getParserData($links)
     {
-
-        if(count($links) === 0){
+        if(count($links) === 0) {
             return 0;
         }
         foreach ($links as $link) {
@@ -72,7 +70,7 @@ class Parser
                 array("link" => "unique:parse_data"));
             if(!$validation->fails()) {
                 $data = new ParseData;
-                $parse = $this->GetParserUrl($link);
+                $parse = $this->getParserUrl($link);
                 $dom = phpQuery::newDocument($parse);
                 $data["link"]  = $link;
                 $data["title"] = trim($dom->find(".offer-titlebox > h1")->text(),"\n ");
@@ -80,7 +78,7 @@ class Parser
                 $data["price"] = $dom->find(".pricelabel__value")->text();
                 $data["description"] = trim($dom->find("#textContent")->text(), "\n ");
 
-                foreach ( $dom->find(".offer-details__item") as $key => $value) {
+                foreach ($dom->find(".offer-details__item") as $key => $value) {
                     $pq = pq($value);
                     if($pq->find(".offer-details__name")->text() == 'Год выпуска') {
                         $data["year_of_issue"] = $pq->find(".offer-details__value")->text();
